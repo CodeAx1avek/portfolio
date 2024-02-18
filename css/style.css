@@ -373,3 +373,13 @@ canvas {
       opacity: 1;
     }
   }
+
+
+
+/* About Section */
+
+html{
+    scroll-behavior: smooth;    
+}
+
+/* Skill Section */
