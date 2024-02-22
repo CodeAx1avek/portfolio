@@ -142,6 +142,75 @@
     animation: slideLeft 1s ease forwards;
     animation-delay: 1.3s;
 }
+/* About Section */
+.about {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 70px 10% 0;
+    margin-top: 10%;
+}
+
+.about-content {
+    max-width: 600px;
+}
+
+.about-content h3 {
+    font-size: 32px;
+    font-weight: 700;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.about-content p {
+    font-size: 16px;
+    margin: 20px 0 0;
+    text-align: left;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1.3s;
+}
+
+/* Projects Section */
+.projects {
+    width: 100%;
+    padding: 70px 10% 0;
+}
+
+.projects .container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.projects h3 {
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.project-item {
+    margin-bottom: 30px;
+}
+
+.project-item h4 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.project-item p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.project-item a {
+    color: green;
+}
+
 
 .home-sci a {
     display: inline-flex;
@@ -465,6 +534,90 @@ html{
                 height: 300px;
             }
         }
+        /* skills */
+        /* Skills Section */
+.skills {
+    color: #ffffff;
+    padding: 80px 0;
+}
+
+.skills .container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.skills h3 {
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+
+.skill-item {
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.skill-item h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #4caf50;
+}
+
+.skill-bar {
+    background-color: #222;
+    border: 1px solid #444;
+    border-radius: 10px;
+    height: 20px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.skill-level {
+    background-color: #4caf50;
+    border-radius: 10px;
+    height: 100%;
+    transition: width 1s ease-in-out;
+}
+
+.level-80 { width: 80%; }
+.level-75 { width: 75%; }
+.level-70 { width: 70%; }
+.level-65 { width: 25%; }
+
+        /* Footer Section */
+.footer {
+    background-color: black;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.footer p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links a {
+    display: inline-block;
+    margin-right: 10px;
+    color: white;
+    font-size: 24px;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    color: green;
+}
+
     </style>
 </head>
 <body>
@@ -479,8 +632,8 @@ html{
         <nav class="navbar">
             <a href="#home" style="--i:1;" class="active">Home</a>
             <a href="#about" style="--i:2;">About</a>
-            <a href="#skill" style="--i:3;">Skills</a>
-            <a href="#project" style="--i:4;">Projects</a>
+            <a href="#project" style="--i:3;">Projects</a>
+            <a href="#skill" style="--i:4;">Skills</a>
             <a href="#contact" style="--i:5;">Contact</a>
         </nav>
     </header>
@@ -500,8 +653,8 @@ html{
 
             <div class="home-sci">
                 <a href="https://github.com/codeax1avek" target="_blank"><i class='bx bxl-github'></i></a>
-                <a href="https://www.linkedin.com/in/sachin-kewat/" target="_blank"><i class='bx bxl-linkedin' ></i></a>
-                <a href="/" target="_blank"><i class='bx bxl-whatsapp'></i></a>
+                <a href="https://www.linkedin.com/in/sachinkewat/" target="_blank"><i class='bx bxl-linkedin' ></i></a>
+                <a href="#"><i class='bx bxl-whatsapp'></i></a>
                 <a href="https://www.instagram.com/codeax1/" target="_blank"><i class='bx bxl-instagram'></i></a>
             </div>
            <a href="sachin_kewat.pdf" class="btn-box" download="Sachin CV/Resume">Download CV</a>
@@ -517,13 +670,86 @@ html{
             </div>
         </div>
     </section>
-
-
-    <div class="about" id="about">
+        <div id="about" class="about">
         <div class="container">
-                  </div>
+            <div class="about-content">
+                <h3>About Me</h3>
+                <p>I am Sachin Lalchand Kewat, currently pursuing a Bachelor's degree in Information Technology from Saket College of Arts, Commerce, and Science, Kalyan. I am passionate about technology, particularly in the areas of Python programming, backend web development, and cybersecurity.</p>
+                <p>With hands-on experience in Django and Flask frameworks, along with certifications in Postman API Fundamentals and Developing Applications with SQL, Databases, and Django, I am keen on applying my skills to real-world projects and making meaningful contributions to the tech industry.</p>
+                <p>Outside of academics, I enjoy coding, scripting, and exploring new technologies. I am fluent in English, Hindi, and Marathi.</p>
+                <p>I am actively seeking internship opportunities to further develop my skills and gain practical experience in the field.</p>
+            </div>
+        </div>
     </div>
-    <div id="skill" class="about">
+    <!-- Projects Section -->
+    <div id="project" class="projects">
+        <div class="container">
+            <h3>Projects</h3>
+            <div class="project-item">
+                <h4>E-Course Web Application</h4>
+                <p>Created an online course web application for selling courses. Integrated Razor Pay for handling payments and implemented a coupon code system.</p>
+                <p>Duration: August 2023 - October 2023</p>
+                <p><a href="https://github.com/CodeAx1avek/e-course-Django" target="_blank">GitHub Link</a></p>
+            </div>
+            <div class="project-item">
+                <h4>E-Commerce Web Application</h4>
+                <p>Designed and developed an e-commerce web application using HTML/CSS, JavaScript, and Python Django. Implemented categorized listings and dynamic pricing strategies.</p>
+                <p>Duration: May 2023 - October 2023</p>
+                <p><a href="https://github.com/CodeAx1avek/Eshop" target="_blank">GitHub Link</a></p>
+            </div>
+        </div>
     </div>
-</body> 
-</html
+    <!-- skills -->
+    <!-- Skills Section -->
+<!-- Skills Section -->
+<section id="skill" class="skills">
+    <div class="container">
+        <h3>Skills</h3>
+        <div class="skill-item">
+            <h4>Frontend</h4>
+            <div class="skill-bar">
+                <div class="skill-level level-80"></div>
+            </div>
+            <p>Proficient in HTML, CSS, and JavaScript. Experienced in building responsive and interactive user interfaces.</p>
+        </div>
+        <div class="skill-item">
+            <h4>Backend</h4>
+            <div class="skill-bar">
+                <div class="skill-level level-75"></div>
+            </div>
+            <p>Skilled in server-side development with Python using frameworks like Django and Flask. Experience in building robust and scalable backend systems.</p>
+        </div>
+        <div class="skill-item">
+            <h4>Database</h4>
+            <div class="skill-bar">
+                <div class="skill-level level-70"></div>
+            </div>
+            <p>Proficient in SQL with hands-on experience in database management systems like MySQL, SQLite, and PostgreSQL. Capable of designing and optimizing database schemas.</p>
+        </div>
+        <div class="skill-item">
+            <h4>Version Control & Collaboration</h4>
+            <div class="skill-bar">
+                <div class="skill-level level-80"></div>
+            </div>
+            <p>Proficient in version control using Git and GitHub. Experience in managing code repositories, branching, merging, and collaborating with teams using GitHub.</p>
+        </div>
+        
+    </div>
+</section>
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Sachin Kewat. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="https://github.com/codeax1avek" target="_blank"><i class='bx bxl-github'></i></a>
+                    <a href="https://www.linkedin.com/in/sachin-kewat/" target="_blank"><i class='bx bxl-linkedin'></i></a>
+                    <a href="/" target="_blank"><i class='bx bxl-whatsapp'></i></a>
+                    <a href="https://www.instagram.com/codeax1/" target="_blank"><i class='bx bxl-instagram'></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
